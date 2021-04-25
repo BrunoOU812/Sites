@@ -1,6 +1,9 @@
 const path = require('path');
 
-
+const paquetes = [
+    require('postcss-simple-vars'), 
+    require('postcss-nested')
+]
 
 module.exports = {
     entry:'./app/assets/scripts/app.js',
@@ -14,7 +17,7 @@ module.exports = {
         rules:[
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader',{loader: 'postcss-loader', options:{plugins: paquetes}}]
             }
         ]
     }
