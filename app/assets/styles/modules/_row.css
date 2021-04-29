@@ -1,8 +1,5 @@
 .row {
-    &::after {
-    content: "";
-    clear: both;
-    display: table;}
+  @mixin clearfix;
   &__4 {
     float: left;
     width: 33.33%;
@@ -23,13 +20,13 @@
 }
 */
 
-  /*
+/*
   &::after {
     content: "";
     clear: both;
     display: table;
   }*/
-  /*
+/*
   &--gutters > div {
     padding-right: 65px;
     box-sizing: border-box;
